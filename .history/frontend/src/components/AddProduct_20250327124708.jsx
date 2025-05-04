@@ -1,0 +1,85 @@
+import React from 'react'
+
+import { assetsAdmin } from '../assets/admin_assets/assets'
+
+function AddProduct() {
+  const sizes = ["S", "M", "L", "XL", "XXL"];
+  return (
+    <div className='mt-6 ml-10'>
+      {/*upload images */}
+      <div>
+      <p>Upload image</p>
+      <div className='flex gap-4 my-3 '>
+        <img className='w-20 h-20' src={assetsAdmin.upload_area} alt="" />
+        <img  className='w-20 h-20'src={assetsAdmin.upload_area} alt="" />
+        <img className='w-20 h-20' src={assetsAdmin.upload_area} alt="" />
+        <img className='w-20 h-20' src={assetsAdmin.upload_area} alt="" />
+
+      </div>
+
+      </div>
+      <div>
+        <p>Product name</p>
+        <input className='text-gray-500 my-2 m px-3 py-2 w-[400px] outline-none border-[1px] border-gray-400'  type="text" placeholder='Type here ' />
+      </div>
+
+      <div>
+        <p>Product description</p>
+        <textarea className='text-gray-500 my-2 m px-3 py-2 w-[400px] outline-none border-[1px] border-gray-400'  placeholder='Write content here  ' />
+      </div>
+
+      <div className='flex gap-6'>
+      <div>
+        <p>Product category</p>
+        <select className='text-gray-500 my-2 m px-3 py-1 w-32 outline-none border-[1px] border-gray-400' name="" id="">
+          <option value="">Men</option>
+          <option value="">Women</option>
+          <option value="">Kids</option>
+        </select>
+      </div>
+
+    
+      
+      <div>
+        <p>Sub category</p>
+        <select className='text-gray-500 my-2 m px-3 py-1 outline-none border-[1px] border-gray-400' name="" id="">
+          <option value="">Topwear</option>
+          <option value="">Bottomwear</option>
+          <option value="">Winterwear</option>
+        </select>
+      </div>
+
+      <div>
+        <p>Product Price</p>
+        <input className='text-gray-500 my-2 m px-3 py-1 w-32 outline-none border-[1px] border-gray-400' type="number"  />
+      </div>
+
+      </div>
+      <div className='mt-1'>
+        <p>
+          Product Sizes
+        </p>
+        <div className='flex gap-3 mt-2'>
+        {sizes.map((size)=>(
+          <button className='p-1 w-10 bg-gray-200'>
+            {size}
+          </button>
+        ))}
+        </div>
+
+      </div>
+      <div className='flex gap-2 my-4'>
+        <input type="checkbox" />
+        <p>Add to bestseller</p>
+      </div>
+
+      <button cla className='bg-black text-white py-2 px-10' >Add</button>
+
+      
+
+      
+    </div>
+  )
+}
+
+export default AddProduct
